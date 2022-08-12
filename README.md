@@ -1,5 +1,5 @@
 # z-algorithm
-一个 javascript 的算法运行和算法性能测试框架。
+一个 javascript 的算法运行和性能测试框架。
 
 写给前端小伙伴们学习、测试算法。
 ## 进度
