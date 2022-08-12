@@ -1,0 +1,7 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@z-algorithm/performance': workspace:^1.0.0
+
+dependencies:
+  '@z-algorithm/performance': link:../../libs/performance

@@ -1,0 +1,1 @@
+const performance = require('@z-algorithm/performance')
