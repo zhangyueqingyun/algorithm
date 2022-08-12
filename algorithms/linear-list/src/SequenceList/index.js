@@ -42,7 +42,7 @@ class SequenceList {
      * 排序
      * @param {type: string} 排序算法的类型
      */
-     sort() {}
+     sort(type) {}
 
     /**
      * 查找
