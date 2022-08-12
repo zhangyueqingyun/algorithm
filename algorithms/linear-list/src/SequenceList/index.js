@@ -19,7 +19,7 @@ class SequenceList {
      * 删除
      * @param {ind: number} 待删除的下标
      */
-    delete() {
+    delete(ind) {
         for(let i = ind; i < this.values.length; i++){
             this.values[i] = this.values[i + 1];
         }
@@ -32,9 +32,9 @@ class SequenceList {
      * @return {number} 旧值
      */
     update(val, ind) {
-        const oldVal = this.values[ind]
-        this.values[ind] = val 
-        return oldVal
+        const oldVal = this.values[ind];
+        this.values[ind] = val;
+        return oldVal;
     }
 
 
