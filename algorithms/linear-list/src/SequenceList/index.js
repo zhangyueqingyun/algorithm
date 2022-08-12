@@ -1,6 +1,9 @@
+const AlgorithmPerformance = require('@z-algorithm/performance')
+
 class SequenceList {
     constructor(values = []){
         this.values = values;
+        this.perf = new AlgorithmPerformance('sequence-list')
     }
     
     /**
@@ -9,10 +12,15 @@ class SequenceList {
      * @param {ind: number} 插入的下标
      */
     insert(val, ind) {
+        this.perf.start('insert', this.values)
+        
         for(let i = this.values.length; i > ind; i--){
             this.values[i] = this.values[i - 1];
         }
-        this.values[i] = val;
+        this.values[ind] = val;
+        
+        this.perf.end('insert', this.values)
+        this.perf.print('insert')
     }
 
     /**
@@ -42,7 +50,9 @@ class SequenceList {
      * 排序
      * @param {type: string} 排序算法的类型
      */
-     sort(type) {}
+     sort(type) {
+
+     }
 
     /**
      * 查找
@@ -52,3 +62,6 @@ class SequenceList {
      */
     find(val, type) {}
 }
+
+const sequenceList = new SequenceList([1, 3, 5])
+sequenceList.insert(3, 1)
