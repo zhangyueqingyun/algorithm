@@ -1,5 +1,5 @@
 {
-  "name": "@z-algorithm/performance",
+  "name": "@z-algorithm/tree",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@z-algorithm/performance": "workspace:^1.0.0"
+  }
 }
