@@ -2,7 +2,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "cd ./algorithms/linear-list/ && pnpm start",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines" : { 
+    "npm" : ">=8.12.1",
+    "node" : ">=18.4.0"
   },
   "keywords": [],
   "author": "",

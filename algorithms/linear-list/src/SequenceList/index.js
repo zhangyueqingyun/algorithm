@@ -50,9 +50,7 @@ class SequenceList {
      * 排序
      * @param {type: string} 排序算法的类型
      */
-     sort(type) {
-
-     }
+    sort(type) {}
 
     /**
      * 查找
@@ -63,5 +61,4 @@ class SequenceList {
     find(val, type) {}
 }
 
-const sequenceList = new SequenceList([1, 3, 5])
-sequenceList.insert(3, 1)
+module.exports = SequenceList;

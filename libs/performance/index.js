@@ -44,7 +44,7 @@ class AlgorithmPerformance {
 }
 
 function printPerformance({name, oldValues, newValues, startTime, endTime}) {
-    console.log(`\n[ ${name} ] performance:`);
+    console.log(`[ ${name} ] performance:`);
     console.log('--------');
     console.log(`初始值\t|  ${oldValues}`);
     console.log(`结果值\t|  ${newValues}`)
