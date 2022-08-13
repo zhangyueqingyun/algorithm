@@ -14,7 +14,7 @@ npm install pnpm -g
 pnpm i -r
 
 # 启动项目
-# 若无缓存，该命令会自动读取 algorithms 下的算法提供选择
+# 若无缓存，会自动读取 algorithms 下的算法提供选择
 # 若有缓存，自动执行缓存中的算法，避免重复输入
 pnpm start
 
