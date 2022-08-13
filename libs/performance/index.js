@@ -49,7 +49,7 @@ function printPerformance({name, oldValues, newValues, startTime, endTime}) {
     console.log(`初始值\t|  ${oldValues}`);
     console.log(`结果值\t|  ${newValues}`)
     console.log(`时长\t|  ${endTime - startTime} ms`);
-    console.log('--------\n');
+    console.log('--------');
 }
 
 module.exports = AlgorithmPerformance

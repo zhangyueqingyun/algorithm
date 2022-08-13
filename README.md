@@ -14,5 +14,17 @@ npm install pnpm -g
 pnpm i -r
 
 # 启动项目
+# 若无缓存，该命令会自动读取 algorithms 下的算法提供选择
+# 若有缓存，自动执行缓存中的算法，避免重复输入
 pnpm start
+
+# 启动 linear-list 算法
+# linear-list 必须为 algorithms 下的算法项目
+pnpm start linear-list 
+~~~
+
+## 清除缓存
+清除缓存后，重新执行 pnpm start 会提示选择算法
+~~~shell
+pnpm clear
 ~~~

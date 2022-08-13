@@ -3,6 +3,7 @@
   "description": "",
   "scripts": {
     "start": "node ./scripts/start.js",
+    "clear": "node ./scripts/clear.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines" : { 
