@@ -1,9 +1,9 @@
-const SequenceList = require('./SequenceList');
+const {
+    testInsertionSort
+} = require('./test')
 
 function run(values = [23, 34, 1, 5, 29]) {
-    const sequenceList = new SequenceList(values);
-
-    sequenceList.sort("insertion");
+    testInsertionSort(values)
 }
 
 module.exports = {

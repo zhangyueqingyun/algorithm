@@ -1,18 +1,10 @@
-const AlgorithmPerformance = require('@z-algorithm/performance');
+const {BaseList} = require("@z-algorithm/core")
 
-class SequenceList {
+class SequenceList extends BaseList{
     constructor(values = []){
-        this.originValues = values;
-        this.perf = new AlgorithmPerformance('sequence-list');
+        super(values)
     }
     
-    get values() {
-        return [...this.originValues];
-    }
-
-    set values(values) {
-        this.originValues = values;
-    }
     /**
      * 插入
      * @param {val: number} 待插入的值
@@ -68,11 +60,15 @@ class SequenceList {
      * 排序
      * @param {type: string} 排序算法的类型
      */
-    sort(type) {
+    sort(type = "insertion") {
         const values = this.values;
-
-        const insertionSort = require('./sort/insertion');
-        return insertionSort(this.perf, values);
+        
+        switch(type) {
+            case "insertion": {
+                const insertionSort = require('./sort/insertion');
+                return insertionSort(this.perf, values);        
+            }
+        }
     }
 
     /**

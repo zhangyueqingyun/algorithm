@@ -1,0 +1,35 @@
+lockfileVersion: 5.4
+
+importers:
+
+  .:
+    specifiers: {}
+
+  algorithms/graph:
+    specifiers:
+      '@z-algorithm/performance': workspace:^1.0.0
+    dependencies:
+      '@z-algorithm/performance': link:../../libs/performance
+
+  algorithms/linear-list:
+    specifiers:
+      '@z-algorithm/core': workspace:^1.0.0
+      '@z-algorithm/performance': workspace:^1.0.0
+    dependencies:
+      '@z-algorithm/core': link:../../libs/core
+      '@z-algorithm/performance': link:../../libs/performance
+
+  algorithms/tree:
+    specifiers:
+      '@z-algorithm/performance': workspace:^1.0.0
+    dependencies:
+      '@z-algorithm/performance': link:../../libs/performance
+
+  libs/core:
+    specifiers:
+      '@z-algorithm/performance': workspace:^1.0.0
+    dependencies:
+      '@z-algorithm/performance': link:../performance
+
+  libs/performance:
+    specifiers: {}
