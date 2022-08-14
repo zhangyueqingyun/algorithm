@@ -73,6 +73,10 @@ class SequenceList extends BaseList{
                 const bubbleSort = require('./sort/bubble');
                 return bubbleSort(values, perf);        
             }
+            case "merge": {
+                const mergeSort = require('./sort/merge');
+                return mergeSort(values, perf);        
+            }
         }
     }
 
