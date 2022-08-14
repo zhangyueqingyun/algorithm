@@ -1,4 +1,4 @@
-const SequenceList = require('../list');
+const SequenceList = require('../algorithm');
 
 function insertionSort(values) {
     const list = new SequenceList(values);
