@@ -62,11 +62,16 @@ class SequenceList extends BaseList{
      */
     sort(type = "insertion") {
         const values = this.values;
-        
+        const perf = this.perf;
+
         switch(type) {
             case "insertion": {
                 const insertionSort = require('./sort/insertion');
-                return insertionSort(this.perf, values);        
+                return insertionSort(values, perf);        
+            }
+            case "bubble": {
+                const bubbleSort = require('./sort/bubble');
+                return bubbleSort(values, perf);        
             }
         }
     }

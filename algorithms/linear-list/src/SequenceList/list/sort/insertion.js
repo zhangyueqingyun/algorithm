@@ -1,4 +1,4 @@
-module.exports = function insertionSort(perf, values) {
+module.exports = function insertionSort(values, perf) {
     perf.start("insertion-sort", values)
     
     for(let i = 1; i< values.length; i++) {
