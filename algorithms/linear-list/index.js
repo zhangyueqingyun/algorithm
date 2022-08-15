@@ -1,3 +1,3 @@
-const sequenceList = require('./src/SequenceList');
+const run = require('./src/SequenceList');
 
-sequenceList.run();
+run();

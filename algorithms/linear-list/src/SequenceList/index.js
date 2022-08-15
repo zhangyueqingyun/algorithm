@@ -1,19 +1,13 @@
-const {
-    testInsertionSort,
-    testBubbleSort,
-    testMergeSort,
-    testQuickSort,
-    testCountSort
-} = require('./test');
+const SequenceList = require('./SequenceList');
 
-function run(values = [23 ,34 ,1 ,5 ,29 ,300 ,234 ,43243 ,12341 ,12 ,222 ,1]) {
-    testInsertionSort(values);
-    testBubbleSort(values);
-    testMergeSort(values);
-    testQuickSort(values);
-    testCountSort(values);
+function run(values = [234, 23, 23 ,1, 5, 6, 129]) {
+    const list = new SequenceList(values);
+    list.sort("count");
+    list.sort("insertion");
+    list.sort("bubble");
+    list.sort("merge");
+    list.sort("quick");
+    list.sort("bucket");
 }
 
-module.exports = {
-    run
-};
+module.exports = run;

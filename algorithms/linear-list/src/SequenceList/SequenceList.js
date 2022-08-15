@@ -56,30 +56,8 @@ class SequenceList extends BaseList{
      * @param {type: string} 排序算法的类型
      */
     sort(type = "insertion") {
-        const values = this.values;
-
-        switch(type) {
-            case "insertion": {
-                const insertionSort = require('./sort/insertion');
-                return insertionSort(values);        
-            }
-            case "bubble": {
-                const bubbleSort = require('./sort/bubble');
-                return bubbleSort(values);        
-            }
-            case "merge": {
-                const mergeSort = require('./sort/merge');
-                return mergeSort(values);        
-            }
-            case "quick": {
-                const quickSort = require('./sort/quick');
-                return quickSort(values);
-            }
-            case "count": {
-                const countSort = require('./sort/count');
-                return countSort(values);
-            }
-        }
+        const sort = require(`./sort/${type}`);
+        sort(this.values);
     }
 
     /**
