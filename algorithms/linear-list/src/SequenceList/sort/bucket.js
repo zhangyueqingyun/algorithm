@@ -12,7 +12,6 @@ function bucketSort(values) {
         }
         bucket[i] = val;
     }
-
     return buckets.reduce(function(last, current) {
         return last.concat(current);
     })
