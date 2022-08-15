@@ -8,6 +8,7 @@ function run(values = [234, 23, 23 ,1, 5, 6, 129]) {
     list.sort("merge");
     list.sort("quick");
     list.sort("bucket");
+    list.sort("radix");
 }
 
 module.exports = run;

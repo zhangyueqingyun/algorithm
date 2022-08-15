@@ -1,6 +1,7 @@
 function bucketSort(values) {
     const {max, min} = findMaxAndMin(values);
-    const interval = (max - min) / 5;
+    const bucketNum = 6;
+    const interval = (max - min) / (bucketNum - 1);
     const buckets = [[], [], [], [], [], []];
 
     for(let val of values) {
