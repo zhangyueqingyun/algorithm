@@ -12,17 +12,12 @@ class SequenceList extends BaseList{
      */
     insert(val, ind) {
         const values = this.values;
-
-        this.perf.start('insert', values);
         
         for(let i = values.length; i > ind; i--){
             values[i] = values[i - 1];
         }
         values[ind] = val;
-        
-        this.perf.end('insert', values);
-        this.perf.print('insert');
-        
+
         return values;
     }
 
@@ -62,20 +57,19 @@ class SequenceList extends BaseList{
      */
     sort(type = "insertion") {
         const values = this.values;
-        const perf = this.perf;
 
         switch(type) {
             case "insertion": {
                 const insertionSort = require('./sort/insertion');
-                return insertionSort(values, perf);        
+                return insertionSort(values);        
             }
             case "bubble": {
                 const bubbleSort = require('./sort/bubble');
-                return bubbleSort(values, perf);        
+                return bubbleSort(values);        
             }
             case "merge": {
                 const mergeSort = require('./sort/merge');
-                return mergeSort(values, perf);        
+                return mergeSort(values);        
             }
         }
     }

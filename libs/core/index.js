@@ -1,5 +1,7 @@
 const BaseList = require('./BaseList');
+const performance = require('./performance');
 
 module.exports = {
-    BaseList
+    BaseList,
+    performance
 };

@@ -1,30 +1,25 @@
 class AlgorithmPerformance {
-    constructor(name) {
-        this.name = name;
+    constructor() {
         this.operations = {};
-        this.currentOperation = '';
-    }
-
-    get fullName(){
-        return `${this.name}-${this.currentOperation}`;
+        this.name = '';
     }
 
     get startMarkName() {
-        return `${this.fullName}-start`;
+        return `${this.name}-start`;
     }
 
     get endMarkName() {
-        return `${this.fullName}-end`;
+        return `${this.name}-end`;
     }
 
     start(operation, values) {
-        this.currentOperation = operation;
-        this.operations[operation] = { name: this.fullName, oldValues: `${values}` };
+        this.name = operation;
+        this.operations[operation] = { name: this.name, oldValues: `${values}` };
         performance.mark(this.startMarkName);
     }
 
     end(operation, values) {
-        this.currentOperation = operation;
+        this.name = operation;
 
         performance.mark(this.endMarkName);
         const {startTime: startTime} = performance.getEntriesByName(this.startMarkName)[0];

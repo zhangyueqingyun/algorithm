@@ -1,6 +1,4 @@
-module.exports = function insertionSort(values, perf) {
-    perf.start("insertion-sort", values)
-    
+function insertionSort(values) {
     for(let i = 1; i< values.length; i++) {
         let val = values[i];
         let j;
@@ -10,8 +8,8 @@ module.exports = function insertionSort(values, perf) {
         values[j + 1] = val;
     }
 
-    perf.end("insertion-sort", values)
-    perf.print("insertion-sort")
-
     return values
 }
+
+const {performance} = require('@z-algorithm/core');
+module.exports = performance("insertion-sort", insertionSort);

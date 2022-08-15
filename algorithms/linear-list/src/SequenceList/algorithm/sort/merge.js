@@ -1,14 +1,4 @@
-function mergeSort(values, perf){
-    perf?.start("merge-sort", values);
-
-    values = mergeSortImpl(values);
-    
-    perf?.end("merge-sort", values);
-    perf?.print("merge-sort");
-    return values;
-}
-
-function mergeSortImpl(values) {
+function mergeSort(values) {
     if(values.length === 1) {
         return values;
     }
@@ -40,4 +30,5 @@ function merge(arrA, arrB) {
             .concat(arrB.slice(indexB));
 }
 
-module.exports = mergeSort;
+const {performance} = require('@z-algorithm/core');
+module.exports = performance("merge-sort", mergeSort);

@@ -1,9 +1,6 @@
-const AlgorithmPerformance = require('@z-algorithm/performance');
-
 class BaseList {
     constructor(values = []){
         this.originValues = values;
-        this.perf = new AlgorithmPerformance('sequence-list');
     }
     
     get values() {
