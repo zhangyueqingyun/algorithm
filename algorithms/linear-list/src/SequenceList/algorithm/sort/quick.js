@@ -2,6 +2,7 @@ function quickSort (values) {
     if(values.length < 2) {
         return values;
     }
+    
     const divideInd = Math.floor(values.length / 2);
     const divideVal = values[divideInd];
     
