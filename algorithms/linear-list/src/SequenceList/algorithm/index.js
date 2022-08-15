@@ -71,6 +71,10 @@ class SequenceList extends BaseList{
                 const mergeSort = require('./sort/merge');
                 return mergeSort(values);        
             }
+            case "quick": {
+                const quickSort = require('./sort/quick');
+                return quickSort(values);
+            }
         }
     }
 
