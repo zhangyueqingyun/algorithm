@@ -75,6 +75,10 @@ class SequenceList extends BaseList{
                 const quickSort = require('./sort/quick');
                 return quickSort(values);
             }
+            case "count": {
+                const countSort = require('./sort/count');
+                return countSort(values);
+            }
         }
     }
 

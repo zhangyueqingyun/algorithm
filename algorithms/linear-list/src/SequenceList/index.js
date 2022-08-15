@@ -2,7 +2,8 @@ const {
     testInsertionSort,
     testBubbleSort,
     testMergeSort,
-    testQuickSort
+    testQuickSort,
+    testCountSort
 } = require('./test');
 
 function run(values = [23 ,34 ,1 ,5 ,29 ,300 ,234 ,43243 ,12341 ,12 ,222 ,1]) {
@@ -10,6 +11,7 @@ function run(values = [23 ,34 ,1 ,5 ,29 ,300 ,234 ,43243 ,12341 ,12 ,222 ,1]) {
     testBubbleSort(values);
     testMergeSort(values);
     testQuickSort(values);
+    testCountSort(values);
 }
 
 module.exports = {
