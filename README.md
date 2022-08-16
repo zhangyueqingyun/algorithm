@@ -1,6 +1,6 @@
 # z-algorithm
 ### 更新提示 
-由于新增 @z-algorithm/core 包，更新后为避免报错请重新安装依赖。
+由于新增 @z-algorithm/core、 @z-algorithm/utils 包，更新后为避免报错请重新安装依赖。
 
 ## 概览
 一个 javascript 的算法运行和性能测试框架。
