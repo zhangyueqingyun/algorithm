@@ -10,7 +10,7 @@ async function start () {
     const run = require(`../algorithms/${algorithm}/scripts/run`);
     const succuess = await run(process.argv[3]);
     if(!succuess) {
-        console.log('\n- 该模块暂未开放, 可用模块为：\nlinear-list -> sequence-list\nlinear-list -> link-list\n');
+        console.log('\n警告: 该模块暂未开放, 以下为可用模块\nlinear-list -> sequence-list\nlinear-list -> link-list\n');
         require('./clear');
     }
 }
