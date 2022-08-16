@@ -33,13 +33,14 @@ class AlgorithmPerformance {
         }
     }
     
-    print(operation){
-        printPerformance(this.operations[operation]);
+    print(operation, description){
+        printPerformance(this.operations[operation], description);
     }
 }
 
-function printPerformance({name, oldValues, newValues, startTime, endTime}) {
+function printPerformance({name, oldValues, newValues, startTime, endTime}, description) {
     console.log(`[ ${name} ] performance:`);
+    (description) && (console.log(`[ desc: ${description} ]`));
     console.log('--------');
     console.log(`初始值\t|  ${oldValues}`);
     console.log(`结果值\t|  ${newValues}`)
