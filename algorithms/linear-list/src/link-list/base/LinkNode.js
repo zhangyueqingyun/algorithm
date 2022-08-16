@@ -1,4 +1,4 @@
-class LinkNode{
+class LinkNode {
     constructor(value, next) {
         this.value = value;
         this.next = next;
