@@ -1,19 +1,19 @@
-function doublePointerInsertion(list, ind, val) {
+function doublePointerInsertion(list, index, value) {
     const {head, length} = list
-    if(ind > length) return; 
+    if(index > length) return; 
+    
+    const LinkNode = require('../base/LinkNode');
+    const node = new LinkNode(value);
     
     let i = 0,
         current,
         next = head;
 
-    while(next && ind !== i){
+    while(next && index !== i){
         current = next;
         next = next?.next;
         i++;
     }
-
-    const LinkNode = require('../base/LinkNode');
-    const node = new LinkNode(val);
     
     node.next = next;
     if(current) {
