@@ -1,5 +1,5 @@
 # z-algorithm
-#### 更新提示 
+### 更新提示 
 由于新增 @z-algorithm/core、 @z-algorithm/utils 包，更新后为避免报错请重新安装依赖。
 
 ## 概览
