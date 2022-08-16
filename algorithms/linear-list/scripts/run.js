@@ -6,7 +6,7 @@ async function run (algorithm) {
     if(!algorithm) return;
     
     const runAlgorithm = require(`../src/${algorithm}`);
-    return runAlgorithm(process.argv[3]);
+    return runAlgorithm();
    }
 
 module.exports = run;
