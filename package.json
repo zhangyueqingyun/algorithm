@@ -6,11 +6,15 @@
     "clear": "node ./scripts/clear.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines" : { 
-    "npm" : ">=8.12.1",
-    "node" : ">=18.4.0"
+  "engines": {
+    "npm": ">=8.12.1",
+    "node": ">=18.4.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@z-algorithm/utils": "workspace:^1.0.0",
+    "inquirer": "^8.0.0"
+  }
 }

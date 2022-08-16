@@ -1,19 +1,16 @@
 {
-  "name": "@z-algorithm/linear-list",
+  "name": "@z-algorithm/utils",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js",
-    "clear": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@z-algorithm/core": "workspace:^1.0.0",
-    "@z-algorithm/performance": "workspace:^1.0.0",
+    "@z-algorithm/linear-list": "workspace:^1.0.0",
     "@z-algorithm/utils": "workspace:^1.0.0"
   }
 }
