@@ -22,8 +22,9 @@ class AlgorithmPerformance {
         this.name = operation;
 
         performance.mark(this.endMarkName);
-        const {startTime: startTime} = performance.getEntriesByName(this.startMarkName)[0];
-        const {startTime: endTime} = performance.getEntriesByName(this.endMarkName)[0];
+        
+        const {startTime: startTime} = performance.getEntriesByName(this.startMarkName).pop();
+        const {startTime: endTime} = performance.getEntriesByName(this.endMarkName).pop();
         
         this.operations[operation] = {
             ...this.operations[operation],
