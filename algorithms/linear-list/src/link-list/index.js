@@ -1,6 +1,30 @@
 const LinkList = require('./LinkList');
+const setCycle = require('./base/setCycle');
 
 function run(values = [234, 23, 23 ,1, 5, 6, 129, 234, 43]) {
+    runSingleLinkList(values);
+    runTestLinkListInteraction()
+    return true;
+
+};
+
+function runTestLinkListInteraction() {
+    /** 随便写的测试，有时间优化 */
+    const detectIntersection = require('./detect-intersection/index').performance
+    const list1 = new LinkList([33, 23, 1, 39]);
+    const list2 = new LinkList([23, 1, 5, 23, 22]);
+    setCycle(list1, 2);
+    setCycle(list2, 3);
+    let node1 = list1.head;
+    node1 = node1.next.next.next;
+    let node2 = list2.head;
+    node2 = node2.next.next;
+    node2.next = node1;
+    detectIntersection(list1, list2)
+    return true;
+}
+
+function runSingleLinkList(values) {
     const list = new LinkList(values);
     list.insert('double-pointer', 3, 12);
     list.insert('double-pointer', 7, 15);
@@ -28,7 +52,7 @@ function run(values = [234, 23, 23 ,1, 5, 6, 129, 234, 43]) {
     list.detectCycle('hash', -1);
     list.exchange('double-pointer', 3, 6);
     list.exchange('double-pointer', 0, 2);
-    return true;
-}
+    return true; 
+};
 
 module.exports = run;

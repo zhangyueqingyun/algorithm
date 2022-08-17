@@ -1,6 +1,6 @@
-const doublePointer = require("./insert/double-pointer");
 const LinkBaseList = require("./base/LinkBaseList");
-const LinkNode = require('./base/LinkNode');
+const setCycle = require('./base/setCycle');
+const initLinkList = require('./base/initLinkList');
 
 class LinkList extends LinkBaseList {
     constructor(values = []) {
@@ -40,37 +40,6 @@ class LinkList extends LinkBaseList {
         const detectCycle = require(`./detect-cycle/${type}`).performance;
         detectCycle(setCycle(this.list, cycleIndex));
     }
-}
-
-function setCycle(list, index) {
-    if(index === -1) return list;
-    let current = list.head, i = 0;
-    while(current && index !== i) {
-        current = current.next;
-        i++;
-    }
-    let target = current;
-    while(current.next){
-        current = current.next;
-        i++;
-    }
-    current.next = target;
-    list.hasCycle = true;
-    list.cyclePrintLength = (i + 1) * 2;
-    return list;
-}
-
-function initLinkList(values) {
-    let head, prev;
-    for(let value of values) {
-        let node = new LinkNode(value);
-        head ??= node;
-        if (prev) {
-            prev.next = node;
-        }
-        prev = node;
-    }
-    return head;
 }
 
 module.exports = LinkList;
