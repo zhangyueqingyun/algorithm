@@ -1,4 +1,4 @@
-function detectCycleByExhanstion(list) {
+function detectCycleByExhaustion(list) {
     const {head} = list;
     let index = 0;
     let current = head;
@@ -19,4 +19,7 @@ function detectCycleByExhanstion(list) {
 }
 
 const {performance} = require('@z-algorithm/core');
-module.exports = performance("detect-cycle-exhaustion", detectCycleByExhanstion);
+module.exports = {
+    raw: detectCycleByExhaustion,
+    performance: performance("detect-cycle-exhaustion", detectCycleByExhaustion)
+};

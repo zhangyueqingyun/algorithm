@@ -15,19 +15,19 @@ function run(values = [234, 23, 23 ,1, 5, 6, 129, 234, 43]) {
     // list.delete('single-pointer', 2);
     // list.delete('single-pointer', 0);
     // // list.delete('single-pointer', 6);
-    // list.detectCycle('exhaustion', 3);
-    // list.detectCycle('exhaustion', 5);
-    // list.detectCycle('exhaustion', -1);
+    list.detectCycle('exhaustion', 3);
+    list.detectCycle('exhaustion', 5);
+    list.detectCycle('exhaustion', -1);
     
-    // list.detectCycle('fast-slow-pointer', 3);
-    // list.detectCycle('fast-slow-pointer', 5);
-    // list.detectCycle('fast-slow-pointer', -1);
+    list.detectCycle('fast-slow-pointer', 3);
+    list.detectCycle('fast-slow-pointer', 5);
+    list.detectCycle('fast-slow-pointer', -1);
      
-    // list.detectCycle('hash', 3);
-    // list.detectCycle('hash', 5);
-    // list.detectCycle('hash', -1);
-    list.exchange('double-pointer', 3, 6);
-    list.exchange('double-pointer', 0, 2);
+    list.detectCycle('hash', 3);
+    list.detectCycle('hash', 5);
+    list.detectCycle('hash', -1);
+    // list.exchange('double-pointer', 3, 6);
+    // list.exchange('double-pointer', 0, 2);
     return true;
 }
 

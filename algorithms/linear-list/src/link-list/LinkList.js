@@ -37,7 +37,7 @@ class LinkList extends LinkBaseList {
     }
 
     detectCycle(type, cycleIndex) {
-        const detectCycle = require(`./detect-cycle/${type}`);
+        const detectCycle = require(`./detect-cycle/${type}`).performance;
         detectCycle(setCycle(this.list, cycleIndex));
     }
 }

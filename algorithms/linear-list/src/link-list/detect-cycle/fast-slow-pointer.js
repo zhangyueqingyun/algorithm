@@ -14,4 +14,8 @@ function detectCycleByFastSlowPointer(list) {
 }
 
 const {performance} = require('@z-algorithm/core');
-module.exports = performance("detect-cycle-fast-slow-pointer", detectCycleByFastSlowPointer);
+
+module.exports = {
+    raw: detectCycleByFastSlowPointer,
+    performance: performance("detect-cycle-fast-slow-pointer", detectCycleByFastSlowPointer)
+};

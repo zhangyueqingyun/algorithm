@@ -14,4 +14,8 @@ function detectCycleByHash(list) {
 }
 
 const {performance} = require('@z-algorithm/core');
-module.exports = performance("detect-cycle-hash", detectCycleByHash);
+
+module.exports = {
+    raw: detectCycleByHash,
+    performance: performance("detect-cycle-hash", detectCycleByHash)
+}
