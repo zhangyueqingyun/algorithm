@@ -1,5 +1,6 @@
 function doublePointerDelete(list, index) {
     const {head} = list;
+
     let i = 0,
         prev,
         cur = head;
@@ -17,10 +18,11 @@ function doublePointerDelete(list, index) {
         list.head = cur.next;
         cur.next = null;
     }
+    
     return list;
 }
 
 const {performance} = require('@z-algorithm/core');
-module.exports = performance("double-pointer-delete", doublePointerDelete, (ind, val) => {
+module.exports = performance("double-pointer-delete", doublePointerDelete, (ind) => {
     return `delete(index = ${ind})`
 });

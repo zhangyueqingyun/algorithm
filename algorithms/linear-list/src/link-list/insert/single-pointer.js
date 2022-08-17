@@ -1,5 +1,5 @@
 function singlePointerInsertion(list, index, value) {
-    const {head, length} = list;
+    const {head} = list;
 
     const LinkNode = require('../base/LinkNode');
     const node = new LinkNode(value);
