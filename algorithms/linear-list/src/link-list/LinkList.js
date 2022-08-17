@@ -6,6 +6,7 @@ class LinkList extends LinkBaseList {
     constructor(values = []) {
         super(values);
         this.head = initLinkList(this.values);
+        this.cycle = false;
     }
 
     get list() {
@@ -29,6 +30,29 @@ class LinkList extends LinkBaseList {
         const del = require(`./delete/${type}`);
         del(this.list, ind);
     }
+
+    detectCycle(type, cycleIndex) {
+        const detectCycle = require(`./detect-cycle/${type}`);
+        detectCycle(setCycle(this.list, cycleIndex));
+    }
+}
+
+function setCycle(list, index) {
+    if(index === -1) return list;
+    let current = list.head, i = 0;
+    while(current && index !== i) {
+        current = current.next;
+        i++;
+    }
+    let target = current;
+    while(current.next){
+        current = current.next;
+        i++;
+    }
+    current.next = target;
+    list.hasCycle = true;
+    list.cyclePrintLength = (i + 1) * 2;
+    return list;
 }
 
 function initLinkList(values) {

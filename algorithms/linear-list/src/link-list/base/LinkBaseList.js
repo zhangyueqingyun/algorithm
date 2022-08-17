@@ -11,9 +11,18 @@ class LinkBaseList extends BaseList {
 
     *[Symbol.iterator]() {
         let node = this.head;
-        while(node) {
-            yield node.value;
-            node = node.next;
+        if (this.hasCycle) {    
+            let i = 0;
+            while(node &&  i < this.cyclePrintLength) {
+                yield node.value;
+                node = node.next;
+                i++;
+            }  
+        } else {
+            while(node) {
+                yield node.value;
+                node = node.next;
+            }  
         }
     }
 }
