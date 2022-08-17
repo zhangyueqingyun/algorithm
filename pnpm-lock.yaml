@@ -10,6 +10,18 @@ importers:
       '@z-algorithm/utils': link:libs/utils
       inquirer: 8.2.4
 
+  algorithms/linear-list:
+    specifiers:
+      '@z-algorithm/core': workspace:^1.0.0
+      '@z-algorithm/performance': workspace:^1.0.0
+      '@z-algorithm/utils': workspace:^1.0.0
+      uuid: ^8.3.2
+    dependencies:
+      '@z-algorithm/core': link:../../libs/core
+      '@z-algorithm/performance': link:../../libs/performance
+      '@z-algorithm/utils': link:../../libs/utils
+      uuid: 8.3.2
+
 packages:
 
   /ansi-escapes/4.3.2:
@@ -321,6 +333,11 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    dev: false
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
     dev: false
 
   /wcwidth/1.0.1:

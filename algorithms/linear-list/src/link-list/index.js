@@ -22,6 +22,10 @@ function run(values = [234, 23, 23 ,1, 5, 6, 129]) {
     list.detectCycle('fast-slow-pointer', 3);
     list.detectCycle('fast-slow-pointer', 5);
     list.detectCycle('fast-slow-pointer', -1);
+     
+    list.detectCycle('hash', 3);
+    list.detectCycle('hash', 5);
+    list.detectCycle('hash', -1);
     return true;
 }
 
