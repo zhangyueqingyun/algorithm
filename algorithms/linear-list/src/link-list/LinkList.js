@@ -31,6 +31,11 @@ class LinkList extends LinkBaseList {
         del(this.list, ind);
     }
 
+    exchange(type, indA, indB) {
+        const exchange = require(`./exchange/${type}`);
+        exchange(this.list, indA, indB);
+    }
+
     detectCycle(type, cycleIndex) {
         const detectCycle = require(`./detect-cycle/${type}`);
         detectCycle(setCycle(this.list, cycleIndex));
