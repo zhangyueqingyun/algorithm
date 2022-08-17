@@ -18,6 +18,10 @@ function run(values = [234, 23, 23 ,1, 5, 6, 129]) {
     list.detectCycle('exhaustion', 3);
     list.detectCycle('exhaustion', 5);
     list.detectCycle('exhaustion', -1);
+    
+    list.detectCycle('fast-slow-pointer', 3);
+    list.detectCycle('fast-slow-pointer', 5);
+    list.detectCycle('fast-slow-pointer', -1);
     return true;
 }
 
