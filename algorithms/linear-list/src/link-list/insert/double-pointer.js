@@ -25,5 +25,7 @@ function doublePointerInsertion(list, index, value) {
     return list;
 }
 
-const performance = require('./performance');
-module.exports = performance("double-pointer-insertion", doublePointerInsertion);
+const {performance} = require('@z-algorithm/core');
+module.exports = performance("double-pointer-insertion", doublePointerInsertion, (ind, val) => {
+    return `insert(index = ${ind} , value = ${val})`
+});
