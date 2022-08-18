@@ -26,13 +26,22 @@ function exchangeByDoublePointer(list, indexA, indexB) {
             prevMin = prevMin.next;
             i++;
         }
-        
+
+        const curMin = prevMin.next;
+        const nextMin = curMin.next;
         const curMax = prevMax.next;
-        const nextMin = prevMin.next.next;
-        prevMin.next.next = curMax.next;
-        curMax.next = nextMin;
-        prevMax.next = prevMin.next;
+        const nextMax = curMax.next;
+        
         prevMin.next = curMax;
+        curMin.next = nextMax;
+        
+        if(nextMin === curMax) {
+            curMax.next = curMin;
+            curMin.next = nextMax;
+        } else {
+            prevMax.next = curMin;
+            curMax.next = nextMin;
+        }
     }
 
     return list;
