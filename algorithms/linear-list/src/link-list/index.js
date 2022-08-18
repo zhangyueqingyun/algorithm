@@ -56,6 +56,7 @@ function runSingleLinkList(values) {
     list.sort('bucket');
     list.sort('count');
     list.sort('insertion');
+    list.sort('merge');
     return true; 
 };
 
