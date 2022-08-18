@@ -5,7 +5,7 @@ const initLinkList = require('./base/initLinkList');
 class LinkList extends LinkBaseList {
     constructor(values = []) {
         super(values);
-        this.head = initLinkList(this.values);
+        this.head = initLinkList(this.values).head;
         this.cycle = false;
     }
 

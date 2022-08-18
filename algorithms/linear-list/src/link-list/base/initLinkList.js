@@ -10,7 +10,7 @@ function initLinkList(values) {
         }
         prev = node;
     }
-    return head;
+    return {head, rear: prev};
 }
 
 module.exports = initLinkList;

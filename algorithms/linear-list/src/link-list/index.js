@@ -3,7 +3,8 @@ const setCycle = require('./base/setCycle');
 
 function run(values = [234, 23, 23 ,1, 5, 6, 129, 234, 43]) {
     runSingleLinkList(values);
-    // runTestLinkListInteraction()
+    runTestLinkListInteraction();
+    runQueueTest(values);
     return true;
 
 };
@@ -60,5 +61,15 @@ function runSingleLinkList(values) {
     list.sort('quick');
     return true; 
 };
+
+function runQueueTest(values) {
+    const Queue = require('./Queue');
+    const queue = new Queue(values);
+    console.log(`[ queue ] test:\n--------\n初始\t| ${queue}`)
+    queue.enqueue(132);
+    console.log(`入队\t| ${queue}`);
+    queue.dequeue();
+    console.log(`出队\t| ${queue}\n--------`)
+}
 
 module.exports = run;
