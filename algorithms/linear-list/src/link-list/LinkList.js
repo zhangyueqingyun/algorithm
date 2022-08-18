@@ -40,6 +40,11 @@ class LinkList extends LinkBaseList {
         const detectCycle = require(`./detect-cycle/${type}`).performance;
         detectCycle(setCycle(this.list, cycleIndex));
     }
+
+    sort(type) {
+        const sort = require(`./sort/${type}`);
+        sort(this.list);
+    }
 }
 
 module.exports = LinkList;
