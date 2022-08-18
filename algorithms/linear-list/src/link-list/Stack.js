@@ -3,20 +3,23 @@ const LinkBaseList = require('./base/LinkBaseList');
 
 class Stack extends LinkBaseList{
     constructor (values = []) {
-        super();
-        const top = initStack(values);
-        this.head = top;
+        super(values);
+        this.top = initStack(values);
+    }
+
+    get head() {
+        return this.top;
     }
 
     push(val) {
         const node = new LinkNode(val);
-        node.next = this.head;
-        this.head = node;
+        node.next = this.top;
+        this.top = node;
     }
 
     pop(val) {
-        const node = this.head;
-        this.head = node?.next;
+        const node = this.top;
+        this.top = node?.next;
         return node;
     }
 }
