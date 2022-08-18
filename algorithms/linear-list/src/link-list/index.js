@@ -55,6 +55,7 @@ function runSingleLinkList(values) {
     list.sort('bubble');
     list.sort('bucket');
     list.sort('count');
+    list.sort('insertion');
     return true; 
 };
 
