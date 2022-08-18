@@ -37,7 +37,8 @@ function bucketSort (list) {
             prev.next = current;
         }
         current = next;
-    }    
+    }
+
     list.head = buckets.reduce(function (last, current) {
         if(!last?.head) return current;
         let node = last.head;
@@ -47,6 +48,7 @@ function bucketSort (list) {
         node.next = current.head;
         return last;
     }).head;
+    
     return list;
 }
 
