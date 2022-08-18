@@ -68,8 +68,7 @@ function runQueueTest(values) {
     console.log(`[ queue ] test:\n--------\n初始\t| ${queue}`)
     queue.enqueue(132);
     console.log(`入队\t| ${queue}`);
-    queue.dequeue();
-    console.log(`出队\t| ${queue}\n--------`)
+    console.log(`出队\t| ${queue.dequeue().value}\n--------`)
 }
 
 module.exports = run;
