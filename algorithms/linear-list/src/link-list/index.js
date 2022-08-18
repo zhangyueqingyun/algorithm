@@ -5,6 +5,7 @@ function run(values = [234, 23, 23 ,1, 5, 6, 129, 234, 43]) {
     runSingleLinkList(values);
     runTestLinkListInteraction();
     runQueueTest(values);
+    runStackTest(values);
     return true;
 
 };
@@ -69,6 +70,15 @@ function runQueueTest(values) {
     queue.enqueue(132);
     console.log(`入队\t| ${queue}`);
     console.log(`出队\t| ${queue.dequeue().value}\n--------`)
+}
+
+function runStackTest(values) {
+    const Stack = require('./Stack');
+    const stack = new Stack(values);
+    console.log(`[ stack ] test:\n--------\n初始\t| ${stack}`)
+    stack.push(132);
+    console.log(`入栈\t| ${stack}`);
+    console.log(`出栈\t| ${stack.pop().value}\n--------`)
 }
 
 module.exports = run;
