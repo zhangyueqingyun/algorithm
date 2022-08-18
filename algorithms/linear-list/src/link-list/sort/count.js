@@ -1,16 +1,14 @@
 function countSort (list) {
-    const {head} = list;
-    
+    const {head} = list,
+        sortedArr = [];
+        
     let current = head,
         currentInd = 0;
-    
-    const sortedArr = [];
 
     while(current) {
         let cursor = head,
             num = 0, 
             cursorInd = 0;
-        
         while(cursor) {
             if(cursor.value < current.value || cursor.value === current.value && cursorInd < currentInd) {
                 num++;
@@ -18,9 +16,7 @@ function countSort (list) {
             cursorInd++;
             cursor = cursor.next;
         }
-
         sortedArr[num] = current;
-        
         current = current.next;
         currentInd++;
     }
@@ -29,10 +25,10 @@ function countSort (list) {
         last.next = current;
         return current;
     })
-
+    
     list.head = sortedArr[0];
     sortedArr[sortedArr.length-1].next = null;
-
+    
     return list;
 }
 
