@@ -1,6 +1,7 @@
-const initLinkList = require('./base/initLinkList');
 const LinkNode = require('./base/LinkNode');
 const LinkBaseList = require('./base/LinkBaseList');
+const initLinkList = require('./base/initLinkList');
+
 class Queue extends LinkBaseList{
     constructor (values = []) {
         super();
