@@ -57,6 +57,7 @@ function runSingleLinkList(values) {
     list.sort('count');
     list.sort('insertion');
     list.sort('merge');
+    list.sort('quick');
     return true; 
 };
 
