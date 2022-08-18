@@ -25,4 +25,4 @@ function bubbleSort(list) {
 }
 
 const {performance} = require('@z-algorithm/core');
-module.exports = performance("bubbleSort", bubbleSort);
+module.exports = performance("bubble-sort", bubbleSort);
