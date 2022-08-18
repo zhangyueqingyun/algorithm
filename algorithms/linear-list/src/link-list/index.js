@@ -54,6 +54,7 @@ function runSingleLinkList(values) {
     // list.exchange('double-pointer', 0, 2);
     list.sort('bubble');
     list.sort('bucket');
+    list.sort('count');
     return true; 
 };
 
