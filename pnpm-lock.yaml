@@ -10,6 +10,12 @@ importers:
       '@z-algorithm/utils': link:libs/utils
       inquirer: 8.2.4
 
+  algorithms/graph:
+    specifiers:
+      '@z-algorithm/performance': workspace:^1.0.0
+    dependencies:
+      '@z-algorithm/performance': link:../../libs/performance
+
   algorithms/linear-list:
     specifiers:
       '@z-algorithm/core': workspace:^1.0.0
@@ -21,6 +27,31 @@ importers:
       '@z-algorithm/performance': link:../../libs/performance
       '@z-algorithm/utils': link:../../libs/utils
       uuid: 8.3.2
+
+  algorithms/tree:
+    specifiers:
+      '@z-algorithm/core': workspace:^1.0.0
+      '@z-algorithm/performance': workspace:^1.0.0
+    dependencies:
+      '@z-algorithm/core': link:../../libs/core
+      '@z-algorithm/performance': link:../../libs/performance
+
+  libs/core:
+    specifiers:
+      '@z-algorithm/performance': workspace:^1.0.0
+    dependencies:
+      '@z-algorithm/performance': link:../performance
+
+  libs/performance:
+    specifiers: {}
+
+  libs/utils:
+    specifiers:
+      '@z-algorithm/linear-list': workspace:^1.0.0
+      '@z-algorithm/utils': workspace:^1.0.0
+    dependencies:
+      '@z-algorithm/linear-list': link:../../algorithms/linear-list
+      '@z-algorithm/utils': 'link:'
 
 packages:
 
