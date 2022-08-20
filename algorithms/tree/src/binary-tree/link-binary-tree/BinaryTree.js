@@ -1,15 +1,8 @@
 const AlgorithmPerformance = require('@z-algorithm/performance');
 const perf = new AlgorithmPerformance();
+const BaseBinaryTree = require('../base/BaseBinaryTree');
 
-class BinaryTree {
-    constructor(values) {
-        this.values = values;
-    }
-
-    [Symbol.toPrimitive]() {
-        return this.values;
-    }
-
+class BinaryTree extends BaseBinaryTree{
     get root() {
         return initBinaryTree(this.values);
     }
