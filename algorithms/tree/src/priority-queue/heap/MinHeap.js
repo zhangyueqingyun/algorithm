@@ -13,6 +13,7 @@ class MinHeap extends BaseHeap {
         const heap = this.heap;
         let i = heap.length;
         heap[i] = value;
+
         while(i) {
             const parentIndex = Math.floor((i - 1) / 2);
             const parentValue = heap[parentIndex];
@@ -38,7 +39,8 @@ class MinHeap extends BaseHeap {
 
         let n = 0,
             parentIndex = 0,
-            leftIndex = 1;    
+            leftIndex = 1;
+            
         while(leftIndex < heap.length) {
             const temp = heap[leftIndex];
             heap[leftIndex] = heap[parentIndex];
