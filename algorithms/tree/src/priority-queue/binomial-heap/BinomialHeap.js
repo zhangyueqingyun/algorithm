@@ -33,6 +33,7 @@ class BinomialHeap {
 
                     const newDegree = degree + 1;
                     const newSubHeap = new SubMinHeap(minRoot, newDegree);
+                    
                     setHash(hash, newSubHeap);
 
                     return newSubHeap;
