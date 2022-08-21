@@ -33,7 +33,7 @@ class BinomialHeap {
 
                     const newDegree = degree + 1;
                     const newSubHeap = new SubMinHeap(minRoot, newDegree);
-                    
+
                     setHash(hash, newSubHeap);
 
                     return newSubHeap;
@@ -41,12 +41,6 @@ class BinomialHeap {
                 return curSubTree;
             })
         }
-
-        const values = Object.values(hash).map(item=>item[0]);
-        values.reduce((prev, cur) => {
-            prev && (prev.next = cur);
-            return cur;
-        })
 
         this.heap = getHeapFromHash(hash);
     }
