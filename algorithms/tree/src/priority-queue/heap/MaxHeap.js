@@ -4,11 +4,11 @@ const BaseHeap = require('./base/BaseHeap');
 
 class MinHeap extends BaseHeap {
     get heap () {
-        return this.values.sort((a, b) => (a - b));
+        return this.values.sort((a, b) => (b - a));
     }
 
     enqueue(value) {
-        perf.start('min-heap-enqueue', this.values);
+        perf.start('max-heap-enqueue', this.values);
         
         const heap = this.heap;
         let i = heap.length;
@@ -17,7 +17,7 @@ class MinHeap extends BaseHeap {
         while(i) {
             const parentIndex = Math.floor((i - 1) / 2);
             const parentValue = heap[parentIndex];
-            if(value >= parentValue) {
+            if(value <= parentValue) {
                 break;
             }
             heap[i] = parentValue;
@@ -25,16 +25,16 @@ class MinHeap extends BaseHeap {
             i = parentIndex;
         }
         
-        perf.end('min-heap-enqueue', heap);
-        perf.print('min-heap-enqueue');
+        perf.end('max-heap-enqueue', heap);
+        perf.print('max-heap-enqueue');
     }
 
     dequeue() {
-        perf.start('min-heap-dequeue', this.values);
+        perf.start('max-heap-dequeue', this.values);
 
         const heap = this.heap;
         const value = heap[0];
-
+        
         heap[0] = heap[heap.length - 1];
         heap.pop();
 
@@ -44,16 +44,17 @@ class MinHeap extends BaseHeap {
         let rightIndex = leftIndex + 1;
             
         while(leftIndex < length) {
-            let minIndex = (rightIndex < length && heap[leftIndex] > heap[rightIndex]) ? rightIndex : leftIndex;
-            const temp = heap[minIndex];
-            heap[minIndex] = heap[parentIndex];
+            let maxIndex = (rightIndex < length && heap[leftIndex] < heap[rightIndex]) ? rightIndex : leftIndex;
+            const temp = heap[maxIndex];
+            heap[maxIndex] = heap[parentIndex];
             heap[parentIndex] = temp;
-            parentIndex = minIndex;
+            parentIndex = maxIndex;
             leftIndex = 2 * parentIndex + 1;
         }
         
-        perf.end('min-heap-dequeue', `${value} : ${heap}`);
-        perf.print('min-heap-dequeue');
+        
+        perf.end('max-heap-dequeue',  `${value} : ${heap}`);
+        perf.print('max-heap-dequeue');
 
         return value;
     }
