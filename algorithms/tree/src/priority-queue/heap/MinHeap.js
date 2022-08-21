@@ -34,13 +34,14 @@ class MinHeap extends BaseHeap {
 
         const heap = this.heap;
         const value = heap[0];
+        
         heap[0] = heap[heap.length - 1];
         heap.pop();
 
         let n = 0,
             parentIndex = 0,
             leftIndex = 1;
-            
+
         while(leftIndex < heap.length) {
             const temp = heap[leftIndex];
             heap[leftIndex] = heap[parentIndex];
