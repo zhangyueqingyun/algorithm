@@ -1,9 +1,9 @@
 const Node = require('./Node');
 class SubMinHeap {
-    constructor(root, degree) {
+    constructor(root, degree, next) {
         this.root = root;
         this.degree = degree;
-        this.next = null;
+        this.next = next;
     }
 
     delete() {
