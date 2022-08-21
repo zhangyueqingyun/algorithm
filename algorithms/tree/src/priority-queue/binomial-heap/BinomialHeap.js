@@ -4,11 +4,11 @@ const Node = require('./Node')
 class BinomialHeap {
     constructor(values)  {
         for(let value of values) {
-            this.insert(value);
+            this.enqueue(value);
         }
     }
 
-    insert(value) {
+    enqueue(value) {
         let heap = new SubMinHeap(new Node(value), 0, this.list);
         heap.next = this.heap;
         
