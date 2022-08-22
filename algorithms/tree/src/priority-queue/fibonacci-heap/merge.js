@@ -4,7 +4,6 @@ function merge(node) {
     const hash = {};
 
     let cur = node;
-
     do {
         setHash(hash, cur);
         cur = cur.right;
