@@ -14,7 +14,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@z-algorithm/tree": "workspace:^1.0.0",
     "@z-algorithm/utils": "workspace:^1.0.0",
-    "inquirer": "^8.0.0"
+    "inquirer": "^8.0.0",
+    "uuid": "^8.3.2"
   }
 }

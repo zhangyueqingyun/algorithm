@@ -4,6 +4,10 @@ function run() {
 
     const runBinomialHeapTest = require('./binomial-heap');
     runBinomialHeapTest();
+    
+    const runFibonacciHeapTest = require('./fibonacci-heap');
+    runFibonacciHeapTest();
+
     return true;
 }
 
