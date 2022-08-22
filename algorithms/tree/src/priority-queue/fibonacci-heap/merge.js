@@ -11,7 +11,6 @@ function merge(node) {
     } while (cur !== node)
 
     let duplicateSubHeaps;
-
     while(duplicateSubHeaps =  checkDuplicate(hash)) {
         duplicateSubHeaps.reduce(function(prevRoot, curRoot) {
             if(prevRoot.degree == curRoot.degree) {
