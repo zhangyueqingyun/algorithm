@@ -11,6 +11,7 @@ class FibonacciHeap {
             this.enqueue(value);
         }
     }
+
     enqueue(value) {
         const node = new Node(value);
         if(this.min) {
@@ -29,13 +30,14 @@ class FibonacciHeap {
     dequeue() {
         const perfName = `fibonacci-heap-dequeue`;
         perf.start(perfName, this.values);
+        
         if(!this.min) {
             return;
         }
 
         const node = this.min;
-        let {left, right, firstChild} = node;
-        let temp;
+        let {left, right, firstChild} = node,
+            temp;
         if(right === node) {
             temp = firstChild;
         } else if(firstChild) {
@@ -53,9 +55,9 @@ class FibonacciHeap {
 
         this.min = merge(temp);
 
-        
         perf.end(perfName, node.value);
         perf.print(perfName);
+
         return node.value;
     }
 }
