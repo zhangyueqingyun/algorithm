@@ -2,7 +2,7 @@ const { v4: uuidv4 } = require('uuid');
 
 class TimeProde {
     constructor(id) {
-        this.id = id;
+        this.#id = id;
         this.#uuid = uuidv4();
     }
 
@@ -12,7 +12,7 @@ class TimeProde {
 
     get info() {
         return {
-            id: this.id,
+            id: this.#id,
             startTime: this.#start.startTime,
             endTime: this.#end.startTime,
             duration: this.#measure.duration
