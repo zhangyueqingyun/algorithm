@@ -2,12 +2,16 @@ const { totalmem, freemem } = require('os');
 const { v4: uuidv4 } = require('uuid');
 const { setInterval } = require('timers/promises');
 
+const RUNNING = Symbol('running');
+const WAITING = Symbol('waiting');
+const FINISHED = Symbol('finished');
+
 class MemoryProde {
     constructor(id) {
         this.id = id;
         this.#uuid = uuidv4();
         this.#measures = [];
-        this.#finished = false;
+        this.#status = WAITING;
     }
 
     get value() {
@@ -17,6 +21,8 @@ class MemoryProde {
     }
 
     run() {
+        if(this.#status === FINISHED) return;
+        this.#status = RUNNING;
         for await(let memory of setInterval(1, {
             startTime: performance.now(),
             totalmem: totalmem(),
@@ -30,7 +36,7 @@ class MemoryProde {
     }
 
     stop() {
-        this.#finished = true;
+        this.#status = FINISHED;
     }
 }
 
