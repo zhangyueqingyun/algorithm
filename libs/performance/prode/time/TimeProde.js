@@ -12,6 +12,7 @@ class TimeProde {
 
     get info() {
         return {
+            id: this.id,
             startTime: this.#start.startTime,
             endTime: this.#end.startTime,
             duration: this.#measure.duration
