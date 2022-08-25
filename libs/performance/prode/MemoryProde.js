@@ -8,7 +8,7 @@ const FINISHED = Symbol('finished');
 
 class MemoryProde {
     constructor(id) {
-        this.id = id;
+        this.#id = id;
         this.#uuid = uuidv4();
         this.#measures = [];
         this.#status = WAITING;

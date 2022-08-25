@@ -1,5 +1,5 @@
-const MemoryProde = require('./memory/MemoryProde');
-const TimeProde = require('./time/TimeProde');
+const MemoryProde = require('./MemoryProde');
+const TimeProde = require('./TimeProde');
 
 module.exports = {
     MemoryProde,

@@ -1,7 +1,7 @@
 const {TimeProde, MemoryProde} = require('../prode');
 
 function measure(func, time = true, memory = true) {
-    const data = {}
+    const data = {};
     time && (data.time = measureWithProde(func, TimeProde));
     memory && (data.memory = measureWithProde(func, MemoryProde));
     return data;
