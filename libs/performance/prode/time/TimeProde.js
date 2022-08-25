@@ -7,6 +7,10 @@ class TimeProde {
     }
 
     get value() {
+        return this.#measure.duration;
+    }
+
+    get info() {
         return {
             startTime: this.#start.startTime,
             endTime: this.#end.startTime,
@@ -14,25 +18,25 @@ class TimeProde {
         };
     }
 
-    get startName () {
-        return `${this.#uuid}-start`;
-    }
-
-    get endName () {
-        return `${this.#uuid}-end`;
-    }
-
-    get measureName() {
-        return `${this.#uuid}-measure`
-    }
-
     run() {
-        this.#start = performance.mark(this.startName);
+        this.#start = performance.mark(this.#startName);
     }
 
     stop() {
-        this.#end = performance.mark(this.endName);
-        this.#mersure =  performance.measure(this.measureName, this.startName, this.endName);
+        this.#end = performance.mark(this.#endName);
+        this.#mersure =  performance.measure(this.#measureName, this.#startName, this.#endName);
+    }
+
+    get #startName () {
+        return `${this.#uuid}-start`;
+    }
+
+    get #endName () {
+        return `${this.#uuid}-end`;
+    }
+
+    get #measureName() {
+        return `${this.#uuid}-measure`
     }
 }
 
