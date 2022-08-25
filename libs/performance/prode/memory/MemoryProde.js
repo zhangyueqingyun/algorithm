@@ -11,7 +11,9 @@ class MemoryProde {
     }
 
     get value() {
-        return Math.max(...this.#measures.map(measure => (measure.totalmem - measure.freemem)));
+        return Math.max(...this.#measures.map(
+            measure => (measure.totalmem - measure.freemem)
+        ));
     }
 
     run() {
