@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@z-algorithm/performance": "workspace:^1.0.0",
     "@z-algorithm/tree": "workspace:^1.0.0",
     "@z-algorithm/utils": "workspace:^1.0.0",
     "inquirer": "^8.0.0",

@@ -4,11 +4,13 @@ importers:
 
   .:
     specifiers:
+      '@z-algorithm/performance': workspace:^1.0.0
       '@z-algorithm/tree': workspace:^1.0.0
       '@z-algorithm/utils': workspace:^1.0.0
       inquirer: ^8.0.0
       uuid: ^8.3.2
     dependencies:
+      '@z-algorithm/performance': link:libs/performance
       '@z-algorithm/tree': link:algorithms/tree
       '@z-algorithm/utils': link:libs/utils
       inquirer: 8.2.4
